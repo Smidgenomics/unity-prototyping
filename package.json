@@ -1,0 +1,25 @@
+{
+  "name": "com.smidgenomics.uap-prototyping",
+  "version": "0.1.0",
+  "displayName": "SM Prototyping",
+  "hideInEditor": false,
+  "license": "MIT NON-AI",
+  "unity": "2022.3",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Smidgenomics/uap-prototyping.git"
+  },
+  "author": {
+    "name": "Smidgenomics",
+    "url": "https://github.com/Smidgenomics"
+  },
+  "keywords": [
+    "properties",
+    "drawers",
+    "attributes",
+    "smidgenomics",
+    "property-drawers"
+  ],
+  "unityRelease": "62f2",
+  "description": "Misc prototyping helpers and starter content."
+}
