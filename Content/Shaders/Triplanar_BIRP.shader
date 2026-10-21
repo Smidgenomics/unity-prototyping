@@ -14,7 +14,7 @@
 // Normal mapping might need tweaking, not sure
 // https://forum.unity.com/threads/reading-vertex-normals-and-normal-map-within-a-surface-shader.151554/
 
-Shader "Smidgenomics/Space UVs" {
+Shader "Smidgenomics/Built-in/Triplanar" {
 
 	Properties {
 
@@ -41,11 +41,11 @@ Shader "Smidgenomics/Space UVs" {
 
 		_Scale ("Tiling", Float) = 1.0 // uv scale
 		_NormalScale ("Normal Tiling", Float) = 1.0 // normal scale multiplier
-		[Enum(Smidgenomics.Unity.Prototyping.Editor.ERenderSpace)] // space mode (tiled relative to object or world)
+		[Enum(Smidgenomics.Unity.Prototyping.Editor.ETriplanarSpace)] // space mode (tiled relative to object or world)
 		_Space ("Mode", Float) = 0.0
 	}
 
-	CustomEditor "Smidgenomics.Unity.Prototyping.Editor._SpaceUVs"
+	CustomEditor "Smidgenomics.Unity.Prototyping.Editor._Triplanar"
 
 	SubShader {
 
