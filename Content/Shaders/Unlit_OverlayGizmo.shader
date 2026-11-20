@@ -1,8 +1,8 @@
-// https://discussions.unity.com/t/models-using-transparent-shader-are-overlapping-themselves/226093/2
+// smidgens @ github
 
 // debug shader for rendering gizmos on top of everything else
-// useful for debug visualization
-Shader "Smidgenomics/Debug Gizmo"
+// useful for collider visualization for example
+Shader "Smidgenomics/Unlit/Overlay Gizmo"
 {
 	Properties
 	{

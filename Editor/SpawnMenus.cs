@@ -14,6 +14,9 @@ namespace Smidgenomics.Unity.Prototyping.Editor
 		private const int _PR = -201;
 		private const int _PR_PRIM = _PR + 4;
 
+		[MI("GameObject/Create Separator", false, _PR)]
+		private static void Spawn_Separator(MenuCommand cmd) => PTUtils.SpawnSeparator(cmd);
+
 		// PRIMITIVES
 
 		[MI(_PFX + "Disc", false, _PR_PRIM)]

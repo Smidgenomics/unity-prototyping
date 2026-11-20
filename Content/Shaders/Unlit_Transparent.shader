@@ -1,7 +1,7 @@
 // smidgens @ github
 
 // basic unlit shader that adds alpha channel
-Shader "Smidgenomics/Unlit (transparency)"
+Shader "Smidgenomics/Unlit/Transparent"
 {
 	Properties
 	{

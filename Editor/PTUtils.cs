@@ -2,9 +2,11 @@
 
 namespace Smidgenomics.Unity.Prototyping.Editor
 {
+	using System;
 	using UnityEditor;
 	using UnityEditor.SceneManagement;
 	using UnityEngine;
+	using Object = UnityEngine.Object;
 
 	internal static class PTUtils
 	{
@@ -52,6 +54,26 @@ namespace Smidgenomics.Unity.Prototyping.Editor
 			var go = InstantiateFromGUID(cmd, guid);
 			// go.name = pf.name;
 			Undo.RegisterCreatedObjectUndo(go, "Instantiated prefab");
+			Selection.activeGameObject = go;
+		}
+
+		public static void SpawnSeparator(MenuCommand cmd)
+		{
+			var parent = cmd.context as GameObject;
+			var pfStage = PrefabStageUtility.GetCurrentPrefabStage();
+			if (pfStage && !parent)
+			{
+				parent = pfStage.prefabContentsRoot;
+			}
+			var go = new GameObject("-------------------------------")
+			{
+				tag = "EditorOnly",
+				transform =
+				{
+					parent = parent?.transform
+				}
+			};
+			Undo.RegisterCreatedObjectUndo(go, "Added separator object");
 			Selection.activeGameObject = go;
 		}
 

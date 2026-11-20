@@ -1,20 +1,19 @@
-// xmas
+// smidgens @ github
 
 //==========================================================
-// SpaceUVs.shader
+// Triplanar_BIRP.shader
 // -
-// Uses object's transform to derive texture UVs 
+// Basic triplanar shader for Built-in render pipeline.
+// Use "Smidgenomics/Triplanar" if using URP
 //==========================================================
-
 // Heavily modified from ideas learned from following sources:
 // https://www.youtube.com/watch?v=s79Zu0F8fuY
 // https://discussions.unity.com/t/get-local-position-in-surface-shader/84926/2
-
 // Note:
 // Normal mapping might need tweaking, not sure
 // https://forum.unity.com/threads/reading-vertex-normals-and-normal-map-within-a-surface-shader.151554/
 
-Shader "Smidgenomics/Built-in/Triplanar" {
+Shader "Smidgenomics/BIRP/Triplanar" {
 
 	Properties {
 
